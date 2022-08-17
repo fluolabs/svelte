@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- 1. Introduction  -->
+<!-- a. Adding Data -->
+<script>
+  let name = 'world';
+</script>
+
+<h1>Hello {name.toUpperCase()}!</h1>
+
+<!-- b. Dynamic attributes -->
+<script>
+	let src = '/tutorial/image.gif';
+	let name = 'Rick Astley';
+</script>
+
+<img src = {src}>
+<img {src} alt="{name} dances.">
+
+<!-- c. Styling -->
+<p>This is a paragraph.</p>
+
+<style>
+	p {
+		color: purple;
+		font-family: 'Comic Sans MS', cursive;
+		font-size: 2em;
+	}
+</style>
+
+<!-- d. Nested Components -->
+<!-- App.svelte -->
+<script>
+	import Nested from './Nested.svelte';
+</script>
+<p>This is a paragraph.</p>
+<Nested/>
+<style>
+	p {
+		color: purple;
+		font-family: 'Comic Sans MS', cursive;
+		font-size: 2em;
+	}
+</style>
+
+<!-- Nested.svelte -->
+<p>This is another paragraph.</p>
+
+<!-- f. HTML tags -->
+<script>
+	let string = `this string contains some <strong>HTML!!!</strong>`;
+</script>
+
+<!-- g. Making an app  -->
+<!-- Vite, vite-plugin-svelte, SvelteKit -->
+
+<p>{@html string}</p>
+
+
+</body>
+</html>
